@@ -1,0 +1,123 @@
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div#envelope{
+	width: 70%;
+	margin: 10px 15%;
+	padding:10px 0;
+  border-radius:10px;
+  background-color: rgba(31, 57, 105, 0.6);
+
+}
+form{
+	width:70%;
+	margin:4% 15%;
+}
+header{
+		text-align: center;
+
+}
+
+
+input[type=text]{
+	margin-bottom: 20px;
+	margin-top: 10px;
+	width:100%;
+	padding: 15px;
+	border-radius:5px;
+	border:1px solid #7ac9b7;
+  background-color: rgba(0, 0, 0, 0);
+
+}
+input[type=submit]
+{
+	margin-bottom: 20px;
+	width:100%;
+	padding: 15px;
+	border-radius:5px;
+	border:1px solid #7ac9b7;
+	background-color: #B70330;
+	color: white;
+	font-size:15px;
+	cursor:pointer;
+}
+#submit{
+  border-radius: 15px;
+	border: 2px solid black;
+	background-color: rgb(35, 71, 128);
+	padding: 2% 10%;
+	font-size: 2.1em;
+	border: none;
+	color: white;
+	font-family: 'DINNextLTPro-MediumCond','Source Sans Pro',sans-serif;
+}
+#submit:active{
+  color:rgb(35, 71, 128);
+  background-color: white;
+}
+textarea{
+	width:100%;
+	padding: 15px;
+	margin-top: 10px;
+  border:1px solid #7ac9b7;
+	border-radius:5px;
+	margin-bottom: 20px;
+	resize:none;
+  background-color: rgba(0, 0, 0, 0);
+  }
+input[type=text]:focus,textarea:focus {
+	border-color: #4697e4;
+}
+
+.container{
+  background-color: rgba(255, 255, 255, 0);
+  width: 75%;
+  margin-top: 6%;
+  margin-left: 15%;
+  margin-right: auto;
+  border-radius: 0px;
+  border-style: none;
+  border-width: thick;
+  opacity: 2.9;
+  padding-bottom: 0px;
+}
+
+
+#success{
+	color: #00FF00;
+	margin-left: 15%;
+	margin-bottom: 15px;
+
+
+}
+#fail{
+	color: red;
+	margin: 0% 15% ;
+	margin-bottom: 15px;
+}
+#fail2{
+	color: red;
+	margin: 0% 15% ;
+	margin-bottom: 15px;
+}
+
+#caption{
+  color:white;
+  font-family: 'DINNextLTPro-MediumCond','Source Sans Pro',sans-serif;
+}
+
+#captionCaption{
+  font-family: 'DINNextLTPro-MediumCond','Source Sans Pro',sans-serif;
+  font-weight: 500;
+  font-size: 5em;
+  color:white;
+  line-height:1.1em;
+  top:23%;
+  left:35%;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+}

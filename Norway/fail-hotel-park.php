@@ -1,0 +1,296 @@
+<?php
+
+session_start();
+
+$arrival_date = $_SESSION['arriveField'];
+$depart_date = $_SESSION['departField'];
+$adult_number = $_SESSION['adultField'];
+$children_number = $_SESSION['childrenField'];
+$room_number = $_SESSION['roomField'];
+$payment_method  = $_SESSION['paymentField'];
+$card_number = $_SESSION['cardField'];
+
+
+
+$arrivalDateEmpty;
+$departDateEmpty;
+$card_numberEmpty;
+$invalidDate;
+
+if ($arrival_date=="") {$arrivalDateEmpty=true;} else {$arrivalDateEmpty=false;}
+if ($depart_date=="") {$departDateEmpty=true;} else {$departDateEmpty=false;}
+if (strlen($card_number)<16) {$card_numberEmpty=true;} else {$card_numberEmpty=false;}
+if (strtotime($arrival_date) > strtotime($depart_date)) {$invalidDate=true;} else {$invalidDate=false;}
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Visit Norway</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="menu.css">
+	<link rel="stylesheet" type="text/css" href="hotelsStyle.css">
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script>
+  $(function() {
+    $( "#depart" ).datepicker();
+  });
+  </script>
+	<script>
+  $(function() {
+    $( "#arrive" ).datepicker();
+  });
+  </script>
+</head>
+<body>
+
+  <div class="nav">
+
+	  <div class="banner">
+	    <img id="imgBanner" src="images/banner.jpg">
+	  </div>
+
+
+	  <div class="menu">
+			<div class="menu-wrap">
+				<nav class="menu">
+		        <ul class="clearfix">
+		            <li><a href="home.html">Home</a></li>
+
+								<li><a href="#"> Places to Visit <span class="arrow">&#9660;</span></a>
+									<ul class="sub-menu">
+										<li><a href="fjords.html"> Fjords </a></li>
+											<li><a href="aurora.html"> Aurora Lights</a></li>
+										</ul>
+								</li>
+								  <li><a href="museums.html">Museums</a></li>
+										<li>
+		            <a href="#">About Norway <span class="arrow">&#9660;</span></a>
+		            <ul class="sub-menu">
+		                <li><a href="history.html">History</a></li>
+										<li><a href="art.html"> Art & Culture </a></li>
+										<li><a href="cultural.html">Cultural Events</a></li>
+		            </ul>
+		            </li>
+
+								<li>
+		            <a href="#">Relax <span class="arrow">&#9660;</span></a>
+		            <ul class="sub-menu">
+		                <li><a href="hotels.html">Hotels</a></li>
+		                <li><a href="restaurants.html">Restaurants</a></li>
+		            </ul>
+		            </li>
+								<li><a href="contact.html">Contact</a></li>
+
+		        </ul>
+		    </nav>
+			</div>
+	</div>
+	</div>
+
+
+  <div class="container">
+    <div class="content">
+
+	<div class="heading">
+    <span class="city-name">Bergen</span>
+      <span itemprop="name">
+        <h1>Hotel Park</h1>
+      </span>
+      </div>
+      <img id="pictures" src="images/hotels/hotel-park1.jpg">
+	<div class="col">
+	<?php
+
+	if ($arrivalDateEmpty==true)
+		echo "<label id='emptyField' >Please enter an arrival date.</label><br>";
+	if ($departDateEmpty==true)
+		echo "<label id='emptyField' >Please enter a departure date.</label><br>";
+	if ($card_numberEmpty==true)
+		echo "<label id='emptyField' >Please enter a valid card number.</label><br>";
+	if ($invalidDate==true)
+		echo "<label id='emptyField' >Your Departure Date should be after your Arrival Date.</label><br>";
+
+		?>
+ </div>
+	<div class="form-box book-form-box">
+					<div class="form-holder">
+						<div class="form-frame">
+							<form method="post" action="booking.php" class="book-form">
+								<fieldset>
+									<div class="row">
+										<div class="col-1">
+											<h3 class="title">Book room now:</h3>
+											<div class="content-box">
+                        <p>Hotel Park is a family-run hotel where the modern and the traditional come together beneath sparkling chandeliers. Fantastic antiques and treasures contrast with modern art on the walls. Everything on display has been handpicked by the owners. The atmosphere is comfortably intimate, yet with all that Bergen has to offer within easy distance.</p>
+
+												<p>The hotel’s two buildings date from around 1890 and are located in quiet surroundings on Nygårdshøyden, which in the 1900s was considered one of Bergen's most fashionable areas.  The University of Bergen is nearby, making it easy to combine romance and intellectual pursuits! What about a visit to the University Museum's Natural History Collections, followed by a romantic stroll through the botanical gardens? Or a gourmet meal at the historical restaurant Hanne på Høyden after viewing the Cultural History Collections?</p>
+
+												<p>Each of the 35 rooms is individually designed and characterised by an elegant combination of antique and modern. The breakfast buffet has a homely touch, and complimentary tea, coffee and home-made brownies are served throughout the evening in the intimate dining room.</p>
+
+											<input id="chooseHotels" name="chooseHotels" value="hotel-park">
+
+
+										</div>
+										<div class="parameters-row booking-row">
+																					<div class="col">
+                                            <?php
+                                            if ($arrivalDateEmpty==true || $invalidDate==true)
+                                              echo "<label id='emptyField' for='arrival'>Arrival:*</label>";
+                                            else
+																				      echo "<label for='arrival'>Arrival:</label>";
+                                              ?>
+																						<div class="row">
+																							<div class="text">
+																								<input type="text" name="arrive" id="arrive" />
+																							</div>
+																					<div class="col">
+                                              <?php
+                                              if ($departDateEmpty==true || $invalidDate==true)
+                                                echo "<label id='emptyField' for='departure'>Departure:*</label>";
+                                              else
+                                                echo "<label for='departure'>Departure:</label>";
+                                             ?>
+																						<div class="row">
+																							<div class="text">
+																								<input type="text" name="depart" id="depart" />
+
+																					</div>
+																					<div class="parameters-box">
+																						<div class="col">
+																							<label class="choices">Adults:</label>
+																							<select class="select-02" name="adult" id="adult">
+																								<option value="1">1</option>
+																											<option selected="selected" value="2">2</option>
+																											<option value="3">3</option>
+																											<option value="4">4</option>
+																											<option value="5">5</option>
+																											<option value="6">6</option>
+																							</select>
+																						</div>
+																						<div class="col">
+																							<label class="choices">Children:</label>
+																							<select class="select-02" name="child" id="child">
+																								<option selected="selected" value="0">0</option>
+																											<option value="1">1</option>
+																											<option value="2">2</option>
+																											<option value="3">3</option>
+																							</select>
+																						</div>
+																						<div class="col">
+																							<label class="choices">Rooms:</label>
+																							<select class="select-02" name="rooms" id="rooms">
+																								<option value="1" selected="selected">1</option>
+																											<option value="2">2</option>
+																											<option value="3">3</option>
+																											<option value="4">4</option>
+																											<option value="5">5</option>
+																											<option value="6">6</option>
+																											<option value="7">7</option>
+																							</select>
+																						</div>
+																						<div class="col">
+																							<label class="choices">Payment:</label>
+																							<select class="select-02" name="payment1" id="payment1">
+																								<option value="Visa" selected="selected">Visa</option>
+																											<option value="MasterCard">MasterCard</option>
+																											<option value="Maestro">Maestro</option>
+																							</select>
+																						</div>
+																							<div class="col">
+																							<?php
+
+																							if ($card_numberEmpty==true)
+																								echo "<label id='emptyField'>Card Number:*</label>";
+																							else
+																								echo '<label>Card Number:</label>'
+																						 ?>
+
+																							<div class="text">
+
+																							 <input type='text' name='payment' id="payment" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength='16'></input>
+																							</div>
+																						</div>
+																					</div>
+																					<div class="submit-box">
+																						<input type="submit" value="Book now!" onclick="checkInput(form.arrive.value,form.depart.value,form.payment.value);">
+																					</div>
+																					<div class="submit-box">
+																						<input type="button" id="cancelButton" value="Cancel" onclick="returnValues()">
+																					</div>
+																				</div>
+																			</div>
+																		</fieldset>
+																	</form>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							
+
+							<script>
+							function checkInput(arrive, depart, payment)
+							{
+									var arriveValidation;
+									var departValidation;
+									var paymentValidation;
+
+								if (arrive == "" && depart == "" && payment== "")
+									document.getElementById("fail").innerHTML = ("Please, enter an arrive date and depart date and a valid payment method.");
+								else if (arrive == "" && depart == "")
+									document.getElementById("fail").innerHTML = ("Please enter an arrive and depart date");
+								else if (arrive == "")
+									document.getElementById("fail").innerHTML = ("Please enter an arrive date.");
+								else if (depart == "")
+									document.getElementById("fail").innerHTML = ("Please enter a depart date");
+								else
+								{
+										arriveValidation = true;
+										departValidation = true;
+										paymentValidation = true;
+										document.getElementById("fail").innerHTML = ("");
+								}
+
+								if(arriveValidation==true && departValidation==true && paymentValidation==true)
+								{
+								 document.getElementById("fail").innerHTML = ("Success!");
+								}
+							}
+							</script>
+
+
+							<script>
+							function returnValues()
+							{
+								var var1 = document.getElementById("arrive");
+								var var2 = document.getElementById("depart");
+								var var3 = document.getElementById("adult");
+								var var4 = document.getElementById("child");
+								var var5 = document.getElementById("rooms");
+								var var6 = document.getElementById("payment1");
+								var var7 = document.getElementById("payment");
+
+								var1.value = "";
+								var2.value = "";
+								var3.value = "2";
+								var4.value = "0";
+								var5.value = "1";
+								var6.value = "1";
+								var7.value = "";
+							}
+
+
+							</script>
+
+</body>
+</html>

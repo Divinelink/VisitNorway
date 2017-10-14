@@ -1,0 +1,248 @@
+html {
+  background: url("images/background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: georgia, serif;
+}
+
+.container{
+	width: 60%;
+	background-color: #fff;
+	margin: 0 auto;
+	border-style:none;
+	border-width:thick;
+	opacity: 0.9;
+	border-radius: 20px;
+	padding-bottom: 30px;
+}
+
+.nav{
+  height: 55px;
+  width: 100%;
+  position: fixed;
+  background-color: #333;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.banner{
+  position: fixed;
+  top: 0%;
+  left: 5%;
+
+}
+
+#imgBanner{
+  height:auto;
+  width: 50%;
+}
+
+#imgBG{
+  max-width: 100%;
+  width: 100%;
+}
+body p{
+  font-size: 17px;
+font-family: 'HelveticaNeueW01-55Roma', Arial, sans-serif;
+margin: 0px 0px 1.563em 0px;
+line-height: 26px;
+color: #333;
+}
+body h2{
+    color: #333;
+    font-family: 'DIN Next W01 Light', Arial, sans-serif;
+    font-size: 26px;
+    margin: 0px 0px .5em 0px;
+}
+body h3{
+  color: #333;
+  font-family: 'DIN Next W01 Light', Arial, sans-serif;
+  margin: 0px 0px .5em 0px;
+}
+
+.imageBackground{
+  margin-top: 55px;
+}
+
+.container
+{
+  width: 60%;
+  background-color: #fff;
+  margin-top: 215px;
+  margin-left: 380px;
+  margin-right: auto;
+  border-radius: 0px;
+  border-style:none;
+  border-width:thick;
+  opacity: 0.9;
+  padding-bottom: 0px;
+}
+.content
+{
+	padding: 10px ;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+
+#pictures {
+  max-width: 60%;
+   height: auto;
+   padding-bottom:20px;
+ }
+
+.headings{
+  text-align: center;
+  font-family:'DIN Next W01 Light';
+      color: #333;
+      font-size: 2.5em;
+}
+
+#fact{
+color:#FFAA09;
+}
+
+#top{
+  margin-top: -44px;
+}
+
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+.hover_img{
+  font-family: 'HelveticaNeueW01-55Roma', Arial, sans-serif;
+  font-size: 17px;
+  color:#333;
+}
+.hover_img a:active{
+  color:#333;
+}
+.hover_img a:visited{
+  color:#333;
+}
+
+#imageCenter{
+  max-width: 70%;
+  height:auto;
+  margin-left: 15%;
+}
+
+body td{
+  color: #333;
+  font-family: 'DIN Next W01 Light', Arial, sans-serif;
+}
+
+#details{
+  font-size: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px
+}
+
+#tel{
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: center;
+}
+
+
+
+#dining td, #dining th, #contactInf td,#contactInf th, #contactInf caption{
+  font-family: 'DIN Next W01 Light', A rial, sans-serif;
+  border: 0px solid #E4E4E4;
+  text-align: center;
+
+}
+
+#dining th, #contactInf th{
+  font-size: 1.1em;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  background-color: #4B8282;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+#dining tr.alt td, #contactInf tr.alt td{
+  color: #000000;
+  background-color: #D9DCCF;
+}
+#contactInf th{padding: 15px;}
+
+#contactInf{
+  margin-left: 30%;
+}
+#contactInf caption{
+  border: 1px solid #477E85;
+  background: #477E85;
+  border-radius: 10px;
+  color: #FDFDFD;
+  padding: 15px;
+  font-size: 1.5em;
+}
+
+
+
+.homeBanner{
+  font-family: 'DINNextLTPro-MediumCond','Source Sans Pro',sans-serif;
+  font-weight: 500;
+  position: absolute;
+  font-size: 5em;
+  color:white;
+  line-height:1.1em;
+  top:4%;
+  left:35%;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+}
+
+#emptyField{
+  color:red;
+}
+
+#buttons{
+background-color: rgb(68, 150, 180);
+border-image-source: initial;
+border-image-slice: initial;
+border-image-width: initial;
+border-image-outset: initial;
+border-image-repeat: initial;
+color: rgb(255, 255, 255);
+cursor: pointer;
+float: left;
+font-size: 14px;
+line-height: 18px;
+height: 35px;
+text-shadow: rgb(33, 86, 105) 0px 1px 0px;
+width: 130px;
+text-align: center;
+margin-left: 5px;
+margin-top: 5px;
+border: 0px;
+border-radius: 8px;
+}
+
+.center{
+  margin-left: 33%;
+}
+
+#chooseHotels{visibility: hidden;}
+
+.footer{
+  height:200px;
+  background: #333;
+
+}
+
+#contactInf{
+	display: inline-block;
+
+}
+#contactInf p{
+  color:white;
+}

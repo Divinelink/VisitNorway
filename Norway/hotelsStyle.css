@@ -1,0 +1,191 @@
+
+.post{
+	width:100%;
+	overflow:hidden;
+	border-bottom:2px solid #e6e1e1;
+	font-size:13px;
+	line-height:21px;
+	padding:21px 0 24px;
+}
+
+.post .img-box{
+	float:left;
+	margin:0 24px 0 0;
+	text-align:center;
+}
+
+.post .img-box .img-link{
+	display:block;
+	margin-bottom:10px;
+}
+.post img{
+	display:block;
+	vertical-align:top;
+}
+
+.post .post-box{
+	overflow:hidden;
+}
+
+.post .city{
+	text-transform:uppercase;
+	font:12px/15px Arial, Helvetica, sans-serif;
+	display:block;
+	margin:0 0 5px;
+}
+
+.post h4{
+	font-size:21px;
+	line-height:25px;
+	margin:0 0 5px;
+}
+
+.post h4 a{color:#2c2c2c;}
+#content .post p{margin:0 0 23px;}
+#content .post-rundreise h4 { margin: 0 0 10px; }
+#content .post-rundreise p { margin: 15px 0 23px; }
+#content .post-rundreise p.list { margin: 0 0 2px; }
+.post .btns-holder{
+	width:100%;
+	overflow:hidden;
+}
+
+.post .btn{
+	float:left;
+	background-color:#4496B4;
+	padding:0 20px 0 0;
+	cursor:pointer;
+
+  border-radius: 10px;
+}
+
+.post .btn:first-child{margin:0 21px 0 0;}
+.post .btn span{
+	float:left;
+	background-color:#4496B4;
+	padding:3px 0 3px 10px;
+	font-size:14px;
+	line-height:18px;
+	color:#fff;
+	text-shadow:0 1px 0 #215669;
+	min-width:85px;
+}
+
+.post .btn span{
+  font-weight:600; font-family: "proxima-nova-n6","proxima-nova", Arial, Helvetica, sans-serif;}
+
+	.heading .city-name{
+	display:block;
+	padding:0 0 3px;
+	font-size:18px;
+	line-height:22px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.book-form input[type="submit"] {
+	background-color:#4496B4;
+	border:0;
+	color:#fff;
+	cursor:pointer;
+	float:left;
+	font-size:14px;
+	line-height:18px;
+	height:25px;
+	text-shadow:0 1px 0 #215669;
+	width:165px;
+	border-radius:8px;
+	text-align: center;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.book-form .title{
+	font-size:26px;
+	line-height:30px;
+	font-weight:600;
+	font-family: "proxima-nova-n6","proxima-nova", Arial, Helvetica, sans-serif;
+	color:#010101;
+	margin:0 0 12px;
+}
+
+.content-box {
+    width: 70%;
+    float: right;
+}
+
+ span{font-weight:600; font-family: "proxima-nova-n6","proxima-nova", Arial, Helvetica, sans-serif;}
+
+
+ .ui-datepicker .ui-datepicker-title {
+     margin: 0 2.3em;
+     line-height: 1.8em;
+     text-align: center;
+		 width: 200px;
+	 }
+
+	 .ui-datepicker table {
+	 	width: 100%;
+	 	font-size: .9em;
+	 	border-collapse: collapse;
+	 	margin: 0 0 .4em;
+	 }
+
+
+
+	 .ui-datepicker .ui-datepicker-buttonpane {
+	background-image: none;
+	margin: .7em 0 0 0;
+	padding: 0 .2em;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+}
+
+
+
+.ui-datepicker-next span {
+	float: right;
+}
+
+.ui-datepicker{
+	background-color: #D8E8FF;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+.ui-datepicker a:visited{
+	color: black;
+}
+
+.ui-datepicker td{
+	padding: 5px;
+	padding-left: 10px;
+	border: 1px solid grey;
+	border-radius: 5px;
+	font-family: "proxima-nova-n6","proxima-nova", Arial, Helvetica, sans-serif;
+}
+
+#cancelButton
+{
+	background-color:#4496B4;
+	border:0;
+	color:#fff;
+	cursor:pointer;
+	float:left;
+	font-size:14px;
+	line-height:18px;
+	height:25px;
+	text-shadow:0 1px 0 #215669;
+	width:165px;
+	border-radius:8px;
+	text-align: center;
+	margin-left: 5px;
+	margin-top: 5px;
+}

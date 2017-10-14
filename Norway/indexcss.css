@@ -1,0 +1,20 @@
+html
+{
+  background: url("images/indexbg.png")  center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: Calibri, serif;
+}
+
+#box-link
+{
+  position: fixed;
+  top: 59%;
+  left: 14%;
+  width: 72%;
+  height: 20%;
+  background-color: transparent;
+  border: 1px solid rgba(255, 79, 0, 0.68);
+}

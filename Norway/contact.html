@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Visit Norway</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-7" />
+	<link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="menu.css">
+  <link rel="stylesheet" type="text/css" href="form.css">
+</head>
+<body>
+
+  <div class="nav">
+
+	  <div class="banner">
+	    <img id="imgBanner" src="images/banner.jpg">
+	  </div>
+
+	  <div class="menu">
+			<div class="menu-wrap">
+				<nav class="menu">
+		        <ul class="clearfix">
+		            <li><a href="home.html">Home</a></li>
+
+								<li><a href="#"> Places to Visit <span class="arrow">&#9660;</span></a>
+									<ul class="sub-menu">
+										<li><a href="fjords.html"> Fjords </a></li>
+											<li><a href="aurora.html"> Aurora Lights</a></li>
+										</ul>
+								</li>
+								  <li><a href="museums.html">Museums</a></li>
+										<li>
+		            <a href="#">About Norway <span class="arrow">&#9660;</span></a>
+		            <ul class="sub-menu">
+		                <li><a href="history.html">History</a></li>
+										<li><a href="art.html"> Art & Culture </a></li>
+										<li><a href="cultural.html">Cultural Events</a></li>
+		            </ul>
+		            </li>
+
+								<li>
+		            <a href="#">Relax <span class="arrow">&#9660;</span></a>
+		            <ul class="sub-menu">
+		                <li><a href="hotels.html">Hotels</a></li>
+		                <li><a href="restaurants.html">Restaurants</a></li>
+		            </ul>
+		            </li>
+								<li><a href="contact.html">Contact</a></li>
+
+		        </ul>
+		    </nav>
+			</div>
+	</div>
+	</div>
+
+  <div class="container">
+		<div class="content">
+  <div id="envelope">
+  <form action="" method="post">
+  <header>
+  <h2 id="captionCaption">Contact Form</h2>
+  </header>
+  <label id="caption">Name*</label>
+  <input name="name" placeholder="Bill Gates" type="text" width="100px;">
+  <label id="caption">Email</label>
+  <input name="email" placeholder="example@gmail.com" type="text" id="txtEmail">
+  <label id="caption">Phone</label>
+  <input name="contact" placeholder="6912345678" type="text">
+  <label id="caption">Your Message*</label>
+  <textarea cols="15" name="message" placeholder="Message" rows="10"></textarea>
+  <input id="submit" type="button" value="Submit"  onclick="checkInput(form.name.value,form.message.value, form.email.value);">
+  </form>
+	<p id="success"></p>
+<p id="fail"></p>
+<p id="fail2"></p>
+</div>
+</div>
+</div>
+
+<script>
+function checkInput(name, message, mail)
+{
+	var emailValidation;
+	var nameValidation;
+	var messageValidation;
+	if (name == "" && message == "" )
+		document.getElementById("fail").innerHTML =("Name and message fields are required.");
+	else if (message=="")
+		document.getElementById("fail").innerHTML =("Message field is required.");
+	else if (name=="")
+		document.getElementById("fail").innerHTML =("Name field is required.");
+	else
+	{
+		nameValidation=true;
+		messageValidation=true;
+		document.getElementById("fail").innerHTML =("");
+	}
+	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+	{
+		emailValidation = true;
+		document.getElementById("fail2").innerHTML =("");
+	}
+	else
+	{
+		document.getElementById("fail2").innerHTML=("Your email is not valid. Please enter a valid email.")
+		emailValidation = false;
+	}
+	if (nameValidation == true && messageValidation == true && emailValidation == true)
+	{
+		document.getElementById("success").innerHTML =("Your message has been sent! Please wait for a response!")
+		document.getElementById("fail2").innerHTML =("");
+
+	}
+}
+</script>
+
+
+
+  </body>
+  </html>
